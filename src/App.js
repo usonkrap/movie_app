@@ -5,39 +5,29 @@ import Movie from './Movie'
 class App extends Component {
   state = {
   }
-  // https://reactjs.org/docs/react-component.html
   componentDidMount(){
-    setTimeout(() => {
-      this.setState({
-        movies: [
-          {
-            title: "Trainspotting",
-            image: "https://images-na.ssl-images-amazon.com/images/I/51hapGfPc9L.jpg"
-          },
-          {
-            title: "Matrix",
-            image: "https://images-na.ssl-images-amazon.com/images/I/51FhdGyJ6DL.jpg"
-          },
-          {
-            title: "Star Wars",
-            image: "https://images-na.ssl-images-amazon.com/images/I/81P3lDJbjCL._SY550_.jpg"
-          },
-          {
-            title: "Inception",
-            image: "https://images-na.ssl-images-amazon.com/images/I/51bDICODpZL.jpg"
-          },
-          {
-            title: "Being John Malkovich",
-            image: "https://images-na.ssl-images-amazon.com/images/I/5192PHQF6GL.jpg"
-          }
-        ]
-      });
-    }, 5000);
+    this._getMoveis();
+  }
+
+  _getMoveis = async () => {
+    const movies = await this._callApi();
+    console.log(movies)
+    this.setState({
+      movies
+    });
+
+  }
+
+  _callApi = () => {
+    return fetch('https://yts.am/api/v2/list_movies.json?sort_by=rating')
+    .then(response => response.json())
+    .then(responseJson => responseJson.data.movies)
+    .catch(err => console.log(err));
   }
 
   _renderMovies = () => {
-    return this.state.movies.map((movie, index) => {
-      return <Movie title={movie.title} poster={movie.image} key={index} />
+    return this.state.movies.map((movie) => {
+      return <Movie title={movie.title} poster={movie.medium_cover_image} key={movie.id} />
     })
   }
 
