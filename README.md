@@ -18,3 +18,4 @@
 - [Networking and Fetch](https://facebook.github.io/react-native/docs/network)
 - [Promise]()
 - [Async & Await]()
+- [react-lines-ellipsis](https://www.npmjs.com/package/react-lines-ellipsis)
