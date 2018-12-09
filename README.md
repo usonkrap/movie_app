@@ -1,5 +1,9 @@
 ### Movie application by React
 
+#### Demo
+[link](https://usonkrap.github.io/movie_app/)  
+[CodeSandbox](https://codesandbox.io/s/github/usonkrap/movie_app)
+
 #### requirements
 - [npm](https://www.npmjs.com/)
 - [node.js](https://nodejs.org)
@@ -16,6 +20,12 @@
 - [Array Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 - [Functional or Class Components](https://programmingwithmosh.com/react/react-functional-components/) 
 - [Networking and Fetch](https://facebook.github.io/react-native/docs/network)
-- [Promise]()
-- [Async & Await]()
+- [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [Async & Await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
 - [react-lines-ellipsis](https://www.npmjs.com/package/react-lines-ellipsis)
+
+#### Todo
+- infinite scroll
+- sorting choice
+- rating
+- 

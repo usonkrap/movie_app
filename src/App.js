@@ -13,7 +13,7 @@ class App extends Component {
     const movies = await this._callApi();
     console.log(movies)
     this.setState({
-      movies
+      movies  // movies: movies
     });
 
   }
